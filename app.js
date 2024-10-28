@@ -30,7 +30,7 @@ app.use(
       authRequired: false,
       auth0Logout: true,
       issuerBaseURL: `https://${process.env.AUTH0_DOMAIN}`,
-      baseURL: 'http://localhost:3000',
+      baseURL: 'https://web2-lab1-0x3s.onrender.com',
       clientID: process.env.AUTH0_CLIENT_ID,
       secret: process.env.AUTH0_CLIENT_SECRET
     })
