@@ -40,3 +40,7 @@ app.use(
   app.get('/profile', requiresAuth(), (req, res) => {
     res.send(JSON.stringify(req.oidc.user));
   });
+
+app.use((req, res) => {
+  res.redirect('/');
+});
