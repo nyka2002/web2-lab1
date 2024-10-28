@@ -4,7 +4,10 @@ const pool = require('./db');
 const indexRoute = require('./routes/index');
 const ticketsRouter = require('./routes/tickets');
 const { auth, requiresAuth } = require('express-openid-connect');
+const path = require('path');
 
+app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', ticketsRouter);
 app.use(express.json());
 app.use('/', indexRoute);
